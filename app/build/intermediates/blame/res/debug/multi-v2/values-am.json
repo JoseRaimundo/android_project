@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/gpds-gpu/Desktop/pdm_projeto/android_project/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
+            "outputFile": "/home/gpds-gpu/Downloads/BarcodeReaderSample-master/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
             "map": [
                 {
                     "source": "/home/gpds-gpu/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/5f65c5c2effe3bb45535eb4e383a1b28/res/values-am/values.xml",

@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.pdm.bookbycode.test" >
+    package="com.varvet.barcodereadersample.test">
 
-    <uses-sdk
-        android:minSdkVersion="18"
-        android:targetSdkVersion="26" />
-
-    <instrumentation
-        android:name="android.support.test.runner.AndroidJUnitRunner"
-        android:functionalTest="false"
-        android:handleProfiling="false"
-        android:label="Tests for br.com.pdm.bookbycode"
-        android:targetPackage="br.com.pdm.bookbycode" />
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="26" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:targetPackage="com.varvet.barcodereadersample"
+                     android:handleProfiling="false"
+                     android:functionalTest="false"
+                     android:label="Tests for com.varvet.barcodereadersample"/>
 </manifest>
