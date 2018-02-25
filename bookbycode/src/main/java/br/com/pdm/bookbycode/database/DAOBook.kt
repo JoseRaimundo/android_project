@@ -49,8 +49,12 @@ class DAOBook {
         return lista
     }
 
-    fun delete(id: Int){
-
+    fun delete(book : Book){
+        val banco = this.bancoHelper.writableDatabase // SQLiteDabatase
+        banco.delete(TABELA, // table name
+                     " id = ?", // selection
+                    arrayOf(book.id.toString()) // selectionArgs
+            )
     }
 
     fun update(p: Book){

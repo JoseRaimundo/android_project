@@ -18,4 +18,13 @@ class DatabaseManager(context: Context?) : SQLiteOpenHelper(context, "book.sql3"
         db?.execSQL("drop table book")
         this.onCreate(db)
     }
+
+
+
+//    fun onRemove( db: SQLiteDatabase?, id : Int){
+//        val sql ="DELETE FROM book WHERE  id = " + id + ""
+//        db?.execSQL(sql)
+//    }
+
+
 }
