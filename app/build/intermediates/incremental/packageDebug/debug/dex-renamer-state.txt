@@ -1,4 +1,0 @@
-#Sat Feb 24 11:38:38 BRT 2018
-base.0=/home/gpds-gpu/Downloads/BarcodeReaderSample-master/app/build/intermediates/transforms/dexMerger/debug/18
-path.0=classes.dex
-renamed.0=classes.dex
