@@ -8,6 +8,7 @@ class Book {
     var title: String
     var url_book: String
 
+
     constructor (id: Int, title: String, url_book: String){
         this.id = id
         this.title = title
@@ -21,6 +22,10 @@ class Book {
     }
 
     override fun toString(): String {
-        return id.toString() + " - " + title + " \n " + url_book
+        return id.toString() + " - " + title
+    }
+
+    fun getFullString():String{
+        return id.toString() + " - " + title + "\n" + url_book
     }
 }

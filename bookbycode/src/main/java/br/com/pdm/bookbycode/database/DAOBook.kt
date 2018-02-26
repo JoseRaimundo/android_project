@@ -24,28 +24,30 @@ class DAOBook {
         banco.insert(TABELA, null, cv)
     }
 
-    fun select(): List<Book>{
+    fun select(): List<Book> {
         val lista = arrayListOf<Book>()
         val banco = this.bancoHelper.readableDatabase
         val colunas = arrayOf("id", "title", "url_book")
         val c = banco.query(TABELA, colunas, null, null, null, null, null)
 
         c.moveToFirst()
+        try {
+            do {
+                // recuperar id, nome, idade
+                val id = c.getInt(c.getColumnIndex("id"))
+                val title = c.getString(c.getColumnIndex("title"))
+                val url_book = c.getString(c.getColumnIndex("url_book"))
 
-        do{
-            // recuperar id, nome, idade
-            val id = c.getInt(c.getColumnIndex("id"))
-            val title = c.getString(c.getColumnIndex("title"))
-            val url_book = c.getString(c.getColumnIndex("url_book"))
+                // instanciar uma pessoa
+                val p = Book(id, title, url_book)
+                Log.i("APP", p.toString())
 
-            // instanciar uma pessoa
-            val p = Book(id, title, url_book)
-            Log.i("APP", p.toString())
-
-            // add book na lista
-            lista.add(p)
-        }while(c.moveToNext())
-
+                // add book na lista
+                lista.add(p)
+            } while (c.moveToNext())
+        }catch (e: Exception) {
+            Log.i("Empity: ", e.message)
+        }
         return lista
     }
 

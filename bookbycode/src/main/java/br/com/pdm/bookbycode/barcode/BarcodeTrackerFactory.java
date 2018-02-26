@@ -27,10 +27,10 @@ import br.com.pdm.bookbycode.barcode.BarcodeTracker;
  * Factory for creating a tracker and associated graphic to be associated with a new barcode.  The
  * multi-processor uses this factory to create barcode trackers as needed -- one for each barcode.
  */
-class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
+public class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     private Context mContext;
 
-    BarcodeTrackerFactory(Context context) {
+    public BarcodeTrackerFactory(Context context) {
         mContext = context;
     }
 
