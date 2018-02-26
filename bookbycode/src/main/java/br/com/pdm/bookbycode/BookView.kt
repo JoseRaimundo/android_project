@@ -14,14 +14,12 @@ class BookView : AppCompatActivity() {
     private lateinit var delete_book : Button
     private lateinit var id_book : String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_view)
         book_view_text = findViewById(R.id.book_view)
         this.book_view_text.text = intent.getStringExtra("BOOK_TEXT")
         this.delete_book = findViewById(R.id.delete_book)
-
         this.delete_book.setOnClickListener({onClick(it)})
     }
 
